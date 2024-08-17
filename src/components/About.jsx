@@ -16,7 +16,7 @@ const About = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
           error quibusdam beatae, deleniti eos inventore doloribus et magnam
           nulla autem quam voluptatibus rem perspiciatis minus repudiandae
-          libero consequuntur earum, explicabo qui id, excepturi commodi illum
+          libero consequuntur earum, explicabo qui id,cepturi commodi illum
           aperiam! Quisquam deleniti soluta necessitatibus dolore aliquam
           voluptatem ipsam accusamus quae, quibusdam, debitis culpa iste.
         </p>
