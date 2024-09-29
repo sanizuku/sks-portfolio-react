@@ -1,1 +1,1 @@
-Portfolio usinf react and Tailwind 
+Portfolio using react and Tailwind 
