@@ -9,15 +9,17 @@ const links = [
   { id: 5, link: "contact", label: "Contact" },
 ];
 
-const NavLinkItem = () => {
+const NavLinkItem = ({ handleClick }) => {
   return (
     <ul className="flex md:flex-row flex-col">
       {links.map(({ id, link, label }) => (
         <li
           key={id}
-          className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+          className="px-4 cursor-pointer capitalize font-medium text-purple-500 hover:scale-105 duration-200"
         >
-          <Link to={link}>{label}</Link>
+          <Link to={link} onClick={handleClick}>
+            {label}
+          </Link>
         </li>
       ))}
     </ul>
