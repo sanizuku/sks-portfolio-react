@@ -5,6 +5,7 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Body from "./components/Body";
+import ProjectDetails from "./components/ProjectDetails";
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -15,6 +16,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/project-details",
+          element: <ProjectDetails />,
         },
         {
           path: "portfolio",

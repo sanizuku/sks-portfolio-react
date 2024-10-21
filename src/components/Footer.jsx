@@ -12,7 +12,7 @@ const Footer = () => {
       {/* Email Link Styled as Flat Search Input */}
       <div className="relative flex items-center justify-center mb-8 w-full max-w-lg">
         <a
-          href="mailto:foo@gmail.com"
+          href="mailto:sandeeps16x@gmail.com"
           className="flex items-center justify-between w-full bg-gray-700 hover:bg-gray-600 p-4 rounded-lg transition duration-300"
           target="_blank"
           rel="noreferrer"
