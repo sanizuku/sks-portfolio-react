@@ -2,7 +2,8 @@ import React from "react";
 import NavBar from "./NavBar";
 import { Outlet } from "react-router-dom";
 import SocialLinks from "./SocialLinks";
-import Footer from "./Footer";
+
+import Contact from "./Contact";
 
 const Body = () => {
   return (
@@ -11,7 +12,7 @@ const Body = () => {
       <div className="pt-20">
         <SocialLinks />
         <Outlet /> {/* All main page content appears here with a margin-top */}
-        <Footer />
+        <Contact />
       </div>
     </div>
   );

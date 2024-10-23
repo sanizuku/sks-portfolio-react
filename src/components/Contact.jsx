@@ -1,49 +1,59 @@
 import React from "react";
+import { HiOutlineMail } from "react-icons/hi";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <div
-      name="contact"
-      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black p-4 text-white"
-    >
-      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Contact{" "}
-          </p>
-          <p className="py-6">Submit the form below to get in touch with me</p>
-        </div>
-        <div className=" flex justify-center items-center">
-          <form
-            action="https://getform.io/f/warkdvdb"
-            method="POST"
-            className="flex flex-col w-full md:w-1/2"
-          >
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-            />
-            <input
-              type="text"
-              email="name"
-              placeholder="Enter your email"
-              className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-            />
-            <textarea
-              name="message"
-              placeholder="Enter your message"
-              rows="10"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-            ></textarea>
-            <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
-              Let's talk
-            </button>
-          </form>
+    <footer className="w-full bg-black py-12 flex flex-col items-center">
+      {/* Call to Action Heading */}
+      <h2 className="text-4xl font-extrabold text-white mb-6 text-center tracking-wide">
+        Let's Build Something Together
+      </h2>
+
+      {/* Email Link Styled */}
+      <div className="relative flex items-center justify-center mb-8 w-full max-w-lg">
+        <a
+          href="mailto:sandeeps16x@gmail.com"
+          className="flex items-center justify-between w-full bg-gray-800 hover:bg-gray-700 p-4 rounded-xl shadow-lg transition duration-300"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="flex items-center">
+            <HiOutlineMail size={28} className="text-white mr-3" />
+            <p className="text-lg text-white font-medium">
+              sandeeps16x@gmail.com
+            </p>
+          </div>
+        </a>
+      </div>
+
+      {/* Contact Information */}
+      <div className="text-center text-white mt-10">
+        <div className="text-lg">
+          <p>📞 Phone: +91-9876543210</p>
         </div>
       </div>
-    </div>
+
+      {/* Resume Download */}
+      <div className="flex justify-center items-center mt-10">
+        <a
+          href="/sandeepresume.pdf"
+          download
+          className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-8 py-3 rounded-full flex items-center font-semibold hover:scale-105 hover:shadow-lg transition-transform duration-300"
+        >
+          Download Resume
+          <BsFillPersonLinesFill size={25} className="ml-3" />
+        </a>
+      </div>
+
+      {/* Divider */}
+      <div className="w-full border-t border-gray-700 mt-12"></div>
+
+      {/* Copyright Info */}
+      <div className="text-center text-gray-500 pt-6">
+        <p>&copy; 2024 Sandeep Kumar Singh. All rights reserved.</p>
+      </div>
+    </footer>
   );
 };
 

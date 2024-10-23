@@ -6,7 +6,7 @@ const links = [
   { id: 2, link: "about", label: "About" },
   { id: 3, link: "portfolio", label: "Portfolio" },
   { id: 4, link: "experience", label: "Experience" },
-  { id: 5, link: "contact", label: "Contact" },
+  // { id: 5, link: "contact", label: "Contact" },
 ];
 
 const NavLinkItem = ({ handleClick }) => {
@@ -15,7 +15,7 @@ const NavLinkItem = ({ handleClick }) => {
       {links.map(({ id, link, label }) => (
         <li
           key={id}
-          className="px-4 cursor-pointer capitalize font-medium text-purple-500 hover:scale-105 duration-200"
+          className="px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200"
         >
           <Link to={link} onClick={handleClick}>
             {label}
