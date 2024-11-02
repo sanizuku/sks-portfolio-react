@@ -62,7 +62,7 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      name: "Logo App",
+      name: "Food App",
       src: logoapp,
       srcCode: "https://github.com/sanizuku/namaste-react",
       demo: "https://burgerbuns.netlify.app/",
