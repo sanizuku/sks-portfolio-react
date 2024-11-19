@@ -35,7 +35,9 @@ const ProjectDetails = () => {
           </button>
         </a>
       </div>
-      <h1>Resolving CORS Issue till then please Use CORS Extension... </h1>
+      <h1 className="flex justify-center text-red-400 font-extrabold">
+        ( Resolving CORS Issue till then please Use CORS Extension...){" "}
+      </h1>
       {/* Side by Side layout */}
       <div className="flex flex-col md:flex-row justify-center items-start gap-8">
         {/* Left: Images Section */}

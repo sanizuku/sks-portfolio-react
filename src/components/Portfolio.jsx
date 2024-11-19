@@ -1,7 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import NetflixHomepage from "../assets/NetflixHomepage.png";
-import logoapp from "../assets/logoapp.png";
+import Homepage from "../assets/netflixAssets/Homepage.png";
+import Movies from "../assets/netflixAssets/Movies.png";
+import Search from "../assets/netflixAssets/Search.png";
+import signIn from "../assets/netflixAssets/signIn.png";
+import homepage from "../assets/foodAppAssets/homepage.png";
+import ResPage from "../assets/foodAppAssets/ResPage.png";
+import Cart from "../assets/foodAppAssets/Cart.png";
 
 import youtubepage from "../assets/youtubepage.png";
 
@@ -15,7 +20,7 @@ const Portfolio = () => {
       src: youtubepage,
       srcCode: "https://github.com/sanizuku/namaste-youtube",
       demo: "https://utubbe.netlify.app/",
-      images: [youtubepage, youtubepage, youtubepage, youtubepage, youtubepage], // Add multiple images for the project
+      images: [youtubepage], // Add multiple images for the project
       overview: "A YouTube clone built with React.",
       skills: [
         "React",
@@ -37,10 +42,10 @@ const Portfolio = () => {
     {
       id: 2,
       name: "Netflix Clone",
-      src: NetflixHomepage,
+      src: Homepage,
       srcCode: "https://github.com/sanizuku/netflix_gpt",
       demo: "https://lets-chill.netlify.app",
-      images: [NetflixHomepage, NetflixHomepage],
+      images: [Homepage, Movies, Search, signIn],
       overview: "A Netflix homepage clone built using React.",
       skills: [
         "React",
@@ -63,10 +68,10 @@ const Portfolio = () => {
     {
       id: 3,
       name: "Food App",
-      src: logoapp,
+      src: homepage,
       srcCode: "https://github.com/sanizuku/namaste-react",
       demo: "https://burgerbuns.netlify.app/",
-      images: [logoapp, logoapp],
+      images: [homepage, ResPage, Cart],
       overview: "A Food Ordering app using React.",
       skills: [
         "React",
