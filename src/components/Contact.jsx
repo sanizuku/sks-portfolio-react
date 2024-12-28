@@ -30,7 +30,7 @@ const Contact = () => {
       {/* Contact Information */}
       <div className="text-center text-white mt-10">
         <div className="text-lg">
-          <p>📞 Phone: +91-9876543210</p>
+          <p>📞 Phone: +91-9591896940</p>
         </div>
       </div>
 
