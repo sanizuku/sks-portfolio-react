@@ -18,7 +18,7 @@ const About = () => {
           <div className="flex-1">
             <Education />
             <Experience />
-            {/* <Certificates /> */}
+            {/* <Certificate /> */}
           </div>
         </div>
       </div>
@@ -72,19 +72,23 @@ const Experience = () => (
     />
   </div>
 );
-
-// const Certificates = () => (
-//   <div className="mb-6">
-//     <h3 className="text-2xl font-bold">Certificates</h3>
-//     <div className="ml-4">
-//       <Certificate title="Advanced React" provider="Meta" />
-//       <Certificate
-//         title="Building Backend Applications with NodeJS and Express"
-//         provider="IBM"
-//       />
-//       <Certificate title="Building Restful APIs" provider="IBM" />
-//     </div>
+// const Certificate = ({ title, provider }) => (
+//   <div className="mb-2">
+//     <p className="text-lg font-semibold">{title}</p>
+//     <p className="text-sm text-gray-400">{provider}</p>
 //   </div>
+// );
+// <div className="mb-6">
+//   <h3 className="text-2xl font-bold">Certificates</h3>
+//   <div className="ml-4">
+//     <Certificate title="Advanced React" provider="Meta" />
+//     <Certificate
+//       title="Building Backend Applications with NodeJS and Express"
+//       provider="IBM"
+//     />
+//     <Certificate title="Building Restful APIs" provider="IBM" />
+//   </div>
+// </div>;
 // );
 
 const Timeline = ({ year, institution, position }) => (
@@ -94,12 +98,5 @@ const Timeline = ({ year, institution, position }) => (
     {position && <p className="text-sm text-gray-400">{position}</p>}
   </div>
 );
-
-// const Certificate = ({ title, provider }) => (
-//   <div className="mb-2">
-//     <p className="text-lg font-semibold">{title}</p>
-//     <p className="text-sm text-gray-400">{provider}</p>
-//   </div>
-// );
 
 export default About;
