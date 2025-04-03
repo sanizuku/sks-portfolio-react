@@ -37,7 +37,7 @@ const Contact = () => {
       {/* Resume Download */}
       <div className="flex justify-center items-center mt-10">
         <a
-          href="/SinghSanResume.pdf"
+          href="/Resume_25.pdf"
           download
           className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-8 py-3 rounded-full flex items-center font-semibold hover:scale-105 hover:shadow-lg transition-transform duration-300"
         >
