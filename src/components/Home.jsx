@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div
       name="home"
-      className=" w-full bg-gradient-to-b from-gray-800 to-gray-900 flex flex-col items-center justify-center p-6 min-h-screen"
+      className=" w-full  flex flex-col items-center justify-center p-6 min-h-screen"
     >
       {/* Header: Name and Role */}
       <div className="text-center mb-12 ">

@@ -6,7 +6,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 const Contact = () => {
   return (
     <Element name="contact">
-      <footer className="w-full bg-black py-12 flex flex-col items-center">
+      <footer className="w-full py-12 flex flex-col items-center">
         {/* Call to Action Heading */}
         <h2 className="text-4xl font-extrabold text-white mb-6 text-center tracking-wide">
           Let's Build Something Together
