@@ -1,135 +1,113 @@
+// src/components/Portfolio.jsx
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Homepage from "../assets/netflixAssets/Homepage.png";
-import Movies from "../assets/netflixAssets/Movies.png";
-import Search from "../assets/netflixAssets/Search.png";
-import signIn from "../assets/netflixAssets/signIn.png";
-import homepage from "../assets/foodAppAssets/homepage.png";
-import ResPage from "../assets/foodAppAssets/ResPage.png";
-import Cart from "../assets/foodAppAssets/Cart.png";
+import YoutubePage from "../assets/youtubepage.png";
+import FoodHome from "../assets/foodAppAssets/homepage.png";
 
-import youtubepage from "../assets/youtubepage.png";
+const projects = [
+  {
+    id: 1,
+    title: "YouTube Clone",
+    image: YoutubePage,
+    overview:
+      "A YouTube clone with React, Redux, TailwindCSS, and YouTube API integration.",
+    tech: ["React", "Redux", "YouTube API", "TailwindCSS"],
+    demo: "https://utubbe.netlify.app/",
+    code: "https://github.com/sanizuku/namaste-youtube",
+  },
+  {
+    id: 2,
+    title: "Netflix Clone",
+    image: Homepage,
+    overview:
+      "Netflix homepage clone built using React, Tailwind CSS, Firebase Auth, and TMDB API.",
+    tech: ["React", "TailwindCSS", "Firebase Auth", "TMDB API"],
+    demo: "https://lets-chill.netlify.app",
+    code: "https://github.com/sanizuku/netflix_gpt",
+  },
+  {
+    id: 3,
+    title: "Food Ordering App",
+    image: FoodHome,
+    overview:
+      "Food ordering app with React, TailwindCSS, Context API, and Swiggy API data.",
+    tech: ["React", "TailwindCSS", "Context API", "Swiggy API"],
+    demo: "https://burgerbuns.netlify.app/",
+    code: "https://github.com/sanizuku/namaste-react",
+  },
+];
 
-const Portfolio = () => {
-  const navigate = useNavigate();
+const Portfolio = () => (
+  <section
+    name="portfolio"
+    className="bg-gradient-to-b from-gray-800 to-gray-900 w-full text-white min-h-screen py-12"
+  >
+    <div className="max-w-screen-lg mx-auto px-4">
+      <h2 className="text-4xl font-bold border-b-4 border-gray-500 inline-block mb-6">
+        Portfolio
+      </h2>
+      <p className="mb-8">Some of my personal projects & experiments</p>
 
-  const portfolios = [
-    {
-      id: 1,
-      name: "YouTube Clone",
-      src: youtubepage,
-      srcCode: "https://github.com/sanizuku/namaste-youtube",
-      demo: "https://utubbe.netlify.app/",
-      images: [youtubepage], // Add multiple images for the project
-      overview: "A YouTube clone built with React.",
-      skills: [
-        "React",
-        "Redux",
-        "Youtube API integration",
-        "Routing",
-        "TailwindCss",
-      ],
-      functionalities: [
-        "Search videos",
-        "Play video",
-        "View suggestions",
-        "Comments Section N-level Nesting",
-        "Live Chat using Redux",
-        "Toggle Hamburger Menu",
-        "Search Functionality like Flipkart",
-      ],
-    },
-    {
-      id: 2,
-      name: "Netflix Clone",
-      src: Homepage,
-      srcCode: "https://github.com/sanizuku/netflix_gpt",
-      demo: "https://lets-chill.netlify.app",
-      images: [Homepage, Movies, Search, signIn],
-      overview: "A Netflix homepage clone built using React.",
-      skills: [
-        "React",
-        "Tailwind CSS",
-        "Firebase Authentication",
-        "Javascript",
-        "TMDB API For Data",
-        "React-Redux",
-        "Routing",
-      ],
-      functionalities: [
-        "User Signup",
-        "User login",
-        "Watch trailer",
-        "List of Movies",
-        "SearchMovie on search Page",
-        "User SignOut",
-      ],
-    },
-    {
-      id: 3,
-      name: "Food App",
-      src: homepage,
-      srcCode: "https://github.com/sanizuku/namaste-react",
-      demo: "https://burgerbuns.netlify.app/",
-      images: [homepage, ResPage, Cart],
-      overview: "A Food Ordering app using React.",
-      skills: [
-        "React",
-        "TailwindCSS",
-        "ContextAPI",
-        "Routing",
-        "Offline/Online",
-        "React-Redux",
-        "SWIGGYLIVEAPI",
-      ],
-      functionalities: [
-        "Search Foods/Restaurants",
-        "Filter by Rating",
-        "Add Card",
-        "Swiggy Live API Data for HomePage",
-      ],
-    },
-  ];
-
-  const handleClick = (project) => {
-    navigate(`/project-details`, { state: project });
-  };
-
-  return (
-    <div
-      name="portfolio"
-      className="bg-gradient-to-b from-gray-800 to-black w-full text-white md:h-screen"
-    >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-1">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Portfolio
-          </p>
-          <p className="py-4">Check out some of my personal projects here</p>
-        </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 text-center sm:px-0">
-          {portfolios.map((project) => (
-            <div
-              key={project.id}
-              className="shadow-md shadow-gray-600 rounded-lg cursor-pointer"
-              onClick={() => handleClick(project)}
-            >
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map(({ id, title, image, overview, tech, demo, code }) => (
+          <div
+            key={id}
+            className="group flex flex-col bg-gray-700 border border-transparent rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:bg-transparent hover:border-blue-400"
+          >
+            {/* Image with padding */}
+            <div className="p-4">
               <img
-                src={project.src}
-                alt=""
-                className="rounded-md duration-300 hover:scale-105"
+                src={image}
+                alt={title}
+                className="w-full h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="flex items-center justify-center">
-                <button className="w-full m-4 duration-200 hover:scale-105">
-                  {project.name}
-                </button>
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 p-6 flex flex-col">
+              <h3 className="text-2xl font-semibold mb-2 text-white">
+                {title}
+              </h3>
+              <p className="text-gray-300 text-sm mb-4 flex-1">{overview}</p>
+
+              {/* Tech badges */}
+              <ul className="flex flex-wrap gap-2 mb-4">
+                {tech.map((item) => (
+                  <li
+                    key={item}
+                    className="bg-gray-600 px-2 py-1 text-xs rounded"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Action buttons */}
+              <div className="mt-auto flex space-x-4">
+                <a
+                  href={demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center bg-cyan-500 hover:bg-cyan-600 text-white py-2 rounded-md transition"
+                >
+                  <FaExternalLinkAlt className="mr-2" /> Live Demo
+                </a>
+                <a
+                  href={code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center bg-gray-800 hover:bg-gray-700 text-white py-2 rounded-md transition"
+                >
+                  <FaGithub className="mr-2" /> GitHub
+                </a>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
-  );
-};
+  </section>
+);
 
 export default Portfolio;

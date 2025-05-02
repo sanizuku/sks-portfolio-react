@@ -1,19 +1,24 @@
+// src/components/Body.jsx
 import React from "react";
-import NavBar from "./NavBar";
 import { Outlet } from "react-router-dom";
 import SocialLinks from "./SocialLinks";
-
 import Contact from "./Contact";
+import BottomNavBar from "./BottomNavBar";
+import ScrollToTop from "./ScrollToTop";
 
 const Body = () => {
   return (
-    <div>
-      <NavBar /> {/* Navbar is fixed at the top */}
-      <div className="pt-20">
-        <SocialLinks />
-        <Outlet /> {/* All main page content appears here with a margin-top */}
-        <Contact />
-      </div>
+    <div className="flex flex-col min-h-screen bg-gray-900">
+      {/* main content area grows */}
+      <ScrollToTop />
+      <SocialLinks />
+      <main className="flex-1">
+        <Outlet />
+      </main>
+
+      {/* footer */}
+      <Contact />
+      <BottomNavBar />
     </div>
   );
 };

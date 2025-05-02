@@ -1,57 +1,30 @@
-import About from "./components/About";
+// src/App.js
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Body from "./components/Body";
 import Home from "./components/Home";
+import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Body from "./components/Body";
-import ProjectDetails from "./components/ProjectDetails";
 
 function App() {
-  const appRouter = createBrowserRouter([
+  const router = createBrowserRouter([
     {
       path: "/",
-      element: <Body />,
+      element: <Body />, // Layout wrapper
       children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: "/project-details",
-          element: <ProjectDetails />,
-        },
-        {
-          path: "portfolio",
-          element: <Portfolio />,
-        },
-        {
-          path: "about",
-          element: <About />,
-        },
-        {
-          path: "experience",
-          element: <Experience />,
-        },
-        {
-          path: "contact",
-          element: <Contact />,
-        },
+        { index: true, element: <Home /> },
+        { path: "about", element: <About /> },
+        { path: "portfolio", element: <Portfolio /> },
+        { path: "skill", element: <Experience /> },
+        { path: "contact", element: <Contact /> },
       ],
     },
   ]);
-  return (
-    <RouterProvider router={appRouter} />
-    // {
-    /* <NavBar />
-      <Home />
-      <About />
-      <Portfolio />
-      <Experience />
-      <Contact />
-      <SocialLinks /> */
-    // }
-  );
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

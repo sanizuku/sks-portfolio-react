@@ -1,45 +1,48 @@
+// src/components/Home.jsx
 import React from "react";
 import HeroImage from "../assets/hero.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-router-dom";
+
 const Home = () => {
-  // "homepage": "https://sanizuku.github.io/sks-portfolio-react",
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-gray-800 to-black"
+      className=" w-full bg-gradient-to-b from-gray-800 to-gray-900 flex flex-col items-center justify-center p-6 min-h-screen"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-7xl font-bold text-white">
-            I'm a Software Developer
-          </h2>
-          <p className="text-white py-4 max-w-md">
-            I am a passionate ReactJS developer with a strong focus on building
-            interactive and dynamic web applications. My journey in web
-            development has equipped me with the skills to craft seamless user
-            experiences, particularly through the implementation of complex
-            forms and data-driven components using AG Grid. Proven ability to
-            work independently and collaboratively in fast-paced environments
-          </p>
-
-          <div>
-            <Link
-              to="portfolio"
-              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
-            >
-              Portfolio
-              <span className="group-hover:rotate-90 duration-300">
-                <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
-              </span>
-            </Link>
-          </div>
+      {/* Header: Name and Role */}
+      <div className="text-center mb-12 ">
+        <h1 className="text-5xl md:text-7xl font-extrabold text-white font-serif">
+          Sandeep Singh
+        </h1>
+        <div className="flex items-center justify-center mt-2 text-xl md:text-2xl font-light text-gray-300">
+          🧑🏻‍💻 Software Developer
         </div>
-        <div>
+      </div>
+
+      {/* Main Content: Info + Button and Image */}
+      <div className=" max-w-5xl w-full flex flex-col-reverse md:flex-row items-center gap-8">
+        {/* Info & CTA */}
+        <div className="flex-1 space-y-6">
+          <p className="text-base md:text-lg text-gray-300 max-w-md">
+            I architect 🔧 React apps that load in a blink, scale without
+            breaking, and feel like home to users and developers alike.
+          </p>
+          <a
+            href="/Resume_25.pdf"
+            download
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-lg hover:scale-105 transform transition duration-300"
+          >
+            Download Resume
+            <MdOutlineKeyboardArrowRight size={24} className="ml-2" />
+          </a>
+        </div>
+
+        {/* Hero Image */}
+        <div className="flex-1 flex justify-center">
           <img
             src={HeroImage}
-            alt="my-profile"
-            className="rounded-2xl mx-auto w-2/3 md:w-full"
+            alt="Sandeep Portrait"
+            className="rounded-full w-40 h-40 md:w-56 md:h-56 object-cover shadow-2xl border-4 border-white"
           />
         </div>
       </div>
