@@ -41,10 +41,10 @@ const projects = [
 const Portfolio = () => (
   <section
     name="portfolio"
-    className="bg-gradient-to-b from-gray-800 to-gray-900 w-full text-white min-h-screen py-12"
+    className="bg-gradient-to-b from-gray-900 to-black w-full text-white min-h-screen py-12"
   >
     <div className="max-w-screen-lg mx-auto px-4">
-      <h2 className="text-4xl font-bold border-b-4 border-gray-500 inline-block mb-6">
+      <h2 className="text-4xl font-bold border-b-4 border-cyan-500 inline-block mb-6">
         Portfolio
       </h2>
       <p className="mb-8">Some of my personal projects & experiments</p>

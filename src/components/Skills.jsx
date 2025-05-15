@@ -77,7 +77,10 @@ const skillGroups = [
 ];
 
 const Skills = () => (
-  <section id="skills" className="bg-gray-900 text-white py-20">
+  <section
+    id="skills"
+    className="bg-gradient-to-b from-gray-900 to-black  text-white py-20"
+  >
     <div className="max-w-5xl mx-auto px-4 text-center">
       <h2 className="text-4xl font-extrabold mb-4 inline-block border-b-4 border-cyan-500">
         Skills

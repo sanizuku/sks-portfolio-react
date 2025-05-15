@@ -10,7 +10,7 @@ import {
 const About = () => (
   <section
     id="about"
-    className="min-h-screen bg-gradient-to-b from-gray-800 to-gray-900 text-gray-200 py-20"
+    className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-gray-200 py-20"
   >
     <div className="max-w-4xl mx-auto px-4 space-y-16">
       {/* Header */}
