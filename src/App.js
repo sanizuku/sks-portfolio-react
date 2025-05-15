@@ -6,7 +6,7 @@ import Body from "./components/Body";
 import Home from "./components/Home";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
-import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
         { path: "portfolio", element: <Portfolio /> },
-        { path: "skill", element: <Experience /> },
+        { path: "skill", element: <Skills /> },
         { path: "contact", element: <Contact /> },
       ],
     },
