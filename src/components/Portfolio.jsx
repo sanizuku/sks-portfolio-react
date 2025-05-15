@@ -58,6 +58,7 @@ const Portfolio = () => (
             {/* Image with padding */}
             <div className="p-4">
               <img
+                loading="lazy"
                 src={image}
                 alt={title}
                 className="w-full h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
