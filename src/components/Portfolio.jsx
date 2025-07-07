@@ -4,10 +4,31 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Homepage from "../assets/netflixAssets/Homepage.png";
 import YoutubePage from "../assets/youtubepage.png";
 import FoodHome from "../assets/foodAppAssets/homepage.png";
+import Login from "../assets/DevTinderrAssets/Login.png";
 
 const projects = [
   {
     id: 1,
+    title: "DevTinderr",
+    image: Login,
+    overview:
+      "DevTinderr – a developer networking app built with React and Redux on the front end, Node.js, Express and JWT for secure authentication on the back end, MongoDB for data storage, deployed on an AWS EC2 instance, with a GoDaddy‑registered domain and DNS managed through Cloudflare.",
+    tech: [
+      "React",
+      "Redux",
+      "Node.js",
+      "Express",
+      "JWT",
+      "MongoDB",
+      "AWS EC2",
+      "GoDaddy",
+      "Cloudflare",
+    ],
+    demo: "https://devtinderr.xyz",
+    code: "https://github.com/sanizuku/devTinder-web",
+  },
+  {
+    id: 2,
     title: "YouTube Clone",
     image: YoutubePage,
     overview:
@@ -17,17 +38,17 @@ const projects = [
     code: "https://github.com/sanizuku/namaste-youtube",
   },
   {
-    id: 2,
+    id: 3,
     title: "Netflix Clone",
     image: Homepage,
     overview:
       "Netflix homepage clone built using React, Tailwind CSS, Firebase Auth, and TMDB API.",
     tech: ["React", "TailwindCSS", "Firebase Auth", "TMDB API"],
-    demo: "https://lets-chill.netlify.app",
+    demo: "https://Netglicht.netlify.app",
     code: "https://github.com/sanizuku/netflix_gpt",
   },
   {
-    id: 3,
+    id: 4,
     title: "Food Ordering App",
     image: FoodHome,
     overview:

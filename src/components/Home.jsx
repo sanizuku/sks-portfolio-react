@@ -32,7 +32,7 @@ const Home = () => (
         <div className="flex justify-center md:justify-start items-center gap-4">
           {/* Resume button with group hover */}
           <a
-            href="/sandeep_resume.pdf"
+            href="/SandeepKResume.pdf"
             download
             className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 
                        text-white rounded-full shadow-lg transform transition duration-300 hover:scale-105"
